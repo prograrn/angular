@@ -1,0 +1,46 @@
+<h1>Events</h1>
+
+<h3>Mouse Events</h3>
+<button id="btn" (click)="fireEvent($event)">Click!</button>
+<br>
+<button  (mouseover)="fireEvent($event)">Mouseover Event</button>
+<br>
+<button  (mousedown)="fireEvent($event)">Mousedown Event</button>
+<br>
+<button  (mouseup)="fireEvent($event)">Mouseup Event</button>
+<br>
+<button  (dbclick)="fireEvent($event)">Double click Event</button>
+<br>
+<button  (drag)="fireEvent($event)">Drag Event</button>
+<br>
+<button  (dragover)="fireEvent($event)">Drag Over Event</button>
+<hr>
+<br>
+<button  (click)="changeValue($event)">Change Value</button>
+
+<div *ngIf="value">
+    <p>{{text}}</p>
+</div>
+<br>
+<hr>
+<h3>Keyboard Events</h3>
+
+<input type="text" (keyup)="keyboardEvent($event)" placeholder="keyup event">
+<br>
+<input type="text" (keydown)="keyboardEvent($event)" placeholder="keydown event">
+<br>
+<input type="text" (focus)="keyboardEvent($event)" placeholder="focus event">
+<br>
+<input type="text" (blur)="keyboardEvent($event)" placeholder="blur event">
+<br>
+<input type="text" (cut)="keyboardEvent($event)" placeholder="cut event">
+<br>
+<input type="text" (copy)="keyboardEvent($event)" placeholder="copy event">
+<br>
+<input type="text" (paste)="keyboardEvent($event)" placeholder="paste event">
+<br>
+<hr>
+<form>
+
+    
+</form>

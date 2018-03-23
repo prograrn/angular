@@ -1,0 +1,59 @@
+<h1>{{name}}</h1>
+
+
+<h1>{{people}}</h1>
+
+<ul>
+    <li *ngFor = "let person of people">
+        {{person}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let person of people; let i = index">
+        {{i}} - {{people}}
+    </li>
+</ul>
+
+
+<!-- three ways to use if statement-->
+<span *ngIf="show">{{show}}</span>
+<span *ngIf="!show">{{show}}</span>
+
+<!--or -->
+<span *ngIf="show; else noShow">{{show}}</span>
+<ng-template #noShow>no show</ng-template>
+
+<span>{{show? show: noshow}}</span>
+
+<hr>
+
+<!--ngSwitch -->
+
+<div [ngSwitch]="greeting">
+    <div *ngSwitchCase="'1'">Hello World</div>
+    <div *ngSwitchCase="'2'">Hi There</div>
+    <div *ngSwitchCase="'3'">What's Up</div>
+    <div *ngSwitchDefault>Hello</div>
+</div>
+
+<hr>
+
+<!--using string interpolation-->
+<div><img src="{{imageUrl}}" /></div>
+
+<!-- using attribute binding -->
+<div><img [src]= "imageUrl"/></div>
+
+<!-- another way of binding -->
+<div><img bind-src="imageUrl"/></div>
+
+<hr>
+
+<p [hidden] = "isUnchanged">can you see me?</p>
+
+<!-- pipe -->
+<p>Today is {{ today | date}}</p>
+<p>Today is {{ today | date:"MM-dd-yyyy"}}</p>
+<p>Today is {{ today | date:"yyyy"}}</p>
+<p> One Dollar {{1| currency:"USD":"1"}}</p>
